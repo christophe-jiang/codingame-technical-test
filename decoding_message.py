@@ -14,4 +14,8 @@ def decoding_message(parts) :
     ## suppression des balises
     for i in range(len(debut)) :
         debut[i] = debut[i][1:-1]
-    return "".join(debut)
+    return " ".join(debut)
+
+parts = [ "$message?" , "#ce$" , "ùsecretZ" , "ABonjour#" ,"?estù" ]
+decoding_message(parts)
+## should return "Bonjour ce message est secret"
